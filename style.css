@@ -1,0 +1,102 @@
+table {
+    width: 100%;
+    text-align: center;
+}
+
+.otau td {
+    width: 50px;
+    height: 50px;
+    background-color: #f0e68c;
+    position: relative;
+    cursor: pointer;
+}
+
+.numbering td {
+    font-weight: bold;
+}
+
+.kazan {
+    background-color: #8b4513;
+    width: 80px;
+}
+
+.balls {
+    display: grid;
+    grid-template-columns: repeat(2, 10px);
+    grid-gap: 5px;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.ball {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+/* Стили для блоков ходов */
+.move-block {
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+
+/* Стили для кнопок undo и redo */
+#undo, #redo {
+    background-color: #4CAF50; /* Зеленый цвет */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#undo:hover, #redo:hover {
+    background-color: #45a049; /* Темно-зеленый при наведении */
+}
+
+/* Отключенная кнопка (например, если нет ходов для отмены) */
+button:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+/* Стили для контейнера ходов */
+#moves {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    max-height: 300px;
+    overflow-y: auto; /* Скроллинг, если ходов много */
+    background-color: #fff;
+}
+
+/* Общие стили для текста ходов */
+#moves .move {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Стили для каждого хода */
+#moves .move-number {
+    font-weight: bold;
+    color: #000;
+}
+
+#moves .move-content {
+    color: #666;
+}
